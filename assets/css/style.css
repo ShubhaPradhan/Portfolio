@@ -6,6 +6,7 @@ html {
 body {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 h1,
@@ -78,6 +79,31 @@ button.button:hover:before {
 button.button:hover {
     cursor: pointer;
     color: #fff;
+    background: #d5c455;
+}
+
+.topbtn {
+    border: 0;
+    outline: none;
+    position: fixed;
+    opacity: 0;
+    right: 20px;
+    background: #000;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    z-index: 100;
+    border: 2px solid #000;
+    transition: all 0.2s ease-in-out;
+}
+
+.topbtn.active {
+    opacity: 1;
+}
+
+.topbtn:hover {
+    background: #fff;
+    border: 2px solid #d5c455;
+    color: #d5c455;
 }
 
 /* END UNIVERSAL */
@@ -246,6 +272,7 @@ nav button.open-nav:hover {
     min-height: 750px;
     position: relative;
     width: 100%;
+
 }
 
 .banner-wrapper .bg {
@@ -292,6 +319,7 @@ nav button.open-nav:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 .banner-wrapper .content {
@@ -403,9 +431,17 @@ nav button.open-nav:hover {
     padding: 0rem 5rem;
 }
 
+.resume .sidebar .sidenavigation {
+    margin-top: 6rem;
+    top: 200px;
+}
+
 .resume .sidebar li {
     list-style: none;
     margin-bottom: 0.8rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .resume .sidebar li a {
@@ -415,12 +451,27 @@ nav button.open-nav:hover {
     transition: all 0.3s ease-in-out;
 }
 
-.resume .sidebar li a.active {
-    color: #d5c455;
+.resume .sidebar li .line {
+    width: 23px;
+    height: 3px;
+    background-color: #d5c455;
+    margin-right: 0.3rem;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
 }
 
+.resume .sidebar li.active a {
+    color: #d5c455;
+
+}
+
+.resume .sidebar li.active .line {
+    opacity: 1;
+}
+
+
 .resume .main {
-    margin-top: 8rem;
+    margin-top: 6rem;
 }
 
 .resume .main h3 {
@@ -484,3 +535,307 @@ nav button.open-nav:hover {
 }
 
 /* END RESUME */
+
+
+/* PROJECTS */
+.projects-group {
+    margin-top: 8rem;
+    margin-bottom: 40rem;
+    background: #d5c455;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.projects-group .headings {
+    margin-top: 5rem;
+    padding: 0rem 33rem;
+}
+
+.projects-group .projects {
+    position: absolute;
+    top: 250px;
+    padding: 0rem 5rem;
+}
+
+.projects-group .projects .project {
+    margin-top: 2rem;
+    overflow: hidden;
+}
+
+.projects-group .projects .content {
+    position: relative;
+    transition: all 0.4s ease-in-out;
+}
+
+.projects-group .projects .content img {
+    height: 430px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.projects-group .projects .content .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.671);
+    width: 30%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.projects-group .projects .content .image-overlay .desc {
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.projects-group .projects .content:hover .image-overlay .desc {
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
+
+.projects-group .projects .content:hover .image-overlay {
+    opacity: 1;
+    width: 100%;
+}
+
+
+/* END PROJECTS */
+
+
+
+/* NEWSLETTER */
+.newsletter {
+    background: #d5c455;
+    padding: 3rem;
+    color: #fff;
+}
+
+.newsletter h1 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.newsletter input {
+    border-radius: 0rem;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    font-size: 1.3rem;
+    box-shadow: none;
+    outline: none;
+}
+
+.newsletter button {
+    background: #000;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 0rem;
+    margin-top: 0rem;
+}
+
+.newsletter button:hover {
+    color: #fff;
+}
+
+/* END NEWSLETTER */
+/* CONTACT */
+.contacts .contact .row {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.contacts .contact-info {
+    padding: 8rem 0rem 8rem 20rem;
+}
+
+.contacts .contact-info h1 {
+    color: #000;
+}
+
+.contacts .contact-info .info {
+    margin-top: 2rem;
+}
+
+.contacts .contact-info .info li {
+    list-style: none;
+    margin-top: 1.5rem;
+}
+
+.contacts .contact-info .info li a {
+    text-decoration: none;
+}
+
+.contacts .contact-info .info li p {
+    color: #000;
+    margin-bottom: 0.1rem;
+}
+
+.contacts .contact-info .info li p i {
+    color: #d5c455;
+}
+
+.contacts .contact-info .info li .title {
+    font-weight: 600;
+}
+
+.contacts .map-info {
+    padding: 5rem 0rem;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.contacts .map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* END CONTACT */
+
+
+/* FOOTER */
+.footer {
+    padding: 2rem 4rem;
+    display: flex;
+    flex-direction: row;
+    background: #d5c455;
+    margin-top: 0rem !important;
+    overflow-x: hidden;
+}
+
+.footer .navbar-brand {
+    font-weight: 900;
+    font-size: 1.6rem;
+    color: #000 !important;
+    text-decoration: none;
+}
+
+.footer .navbar-brand:hover {
+    color: #fff;
+}
+
+.footer .navbar-brand span {
+    background: #fff;
+    border-radius: 50%;
+    color: #d5c455;
+    padding: 0.1rem 0.8rem;
+    font-weight: 900;
+    font-size: 1.6rem;
+    z-index: 0.8;
+    margin-right: -0.7rem;
+}
+
+.footer>div {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.footer .copyrights {
+    text-align: center;
+    color: #000;
+    margin: 0rem auto;
+}
+
+.footer .social-media {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+}
+
+.footer .social-media .social {
+    list-style: none;
+    background: #000;
+    color: #fff;
+    border-radius: 50%;
+    margin-right: 0.2rem;
+    border: 2px solid #000;
+    padding: 0.3rem 0.7rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.footer .social-media .social:hover {
+    cursor: pointer;
+    background: #fff;
+    color: #000;
+    border: 2px solid #000;
+}
+
+.footer .social-media .social i {
+    font-size: 1rem;
+}
+
+.footer .social-media>p {
+    margin-right: 1rem;
+    font-weight: 900;
+    font-size: 1.1rem;
+}
+
+/* END FOOTER */
+
+
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 768px) {
+    .newsletter {
+        padding: 3rem 1.8rem;
+    }
+
+    .newsletter h1 {
+        font-size: 2rem;
+        font-weight: 900;
+    }
+
+    .newsletter input {
+        padding: 0rem 1rem;
+    }
+
+    .newsletter button.btn {
+        background: #fd7444;
+        padding: 1rem 2rem;
+    }
+
+    .contacts .contact-info {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        text-align: start;
+        padding: 0rem 5rem;
+    }
+
+    .contacts .map {
+        padding-top: 90.25%;
+    }
+
+    .footer {
+        display: block;
+    }
+
+    .footer>div {
+        display: block;
+        margin: auto;
+        text-align: center;
+        margin-top: 1.4rem;
+    }
+
+    .footer .social-media {
+        margin-top: 2rem;
+
+    }
+}
+
+/* END MEDIA QUERIES */

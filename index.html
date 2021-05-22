@@ -8,20 +8,18 @@
     <title>Home | Shubha Pradhan</title>
 
     <!--  -->
-    <link rel="shortcut icon" href="assets/images/logo.png">
+    <link rel="shortcut icon" href="assets/images/shubha.png">
 
 
     <!-- MAIN CSS -->
 
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
+    <!-- ANIMATE -->
+    <link rel="stylesheet" href="./vendor/css/aos.css">
     <!-- BOOTSTRAPS -->
     <link rel="stylesheet" type="text/css" href="vendor/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="vendor/css/bootstrap.min.css">
 
-
-    <!-- ANIMATE -->
-    <link rel="stylesheet" href="./vendor/css/aos.css">
     <!-- FONTAWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
         integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
@@ -39,32 +37,33 @@
     <header id="home">
 
         <nav class="navbar navbar-expand-sm fixed-top">
-            <a class="navbar-brand" href="#/" data-aos="fade-right" data-aos-delay="300"><span>S</span>hubha</a>
+            <a class="navbar-brand" href="#/" data-aos="fade-right"><span>S</span>hubha</a>
             <li class="nav-toggle">
-                <button class="open-nav nav-toggler d-sm-none d-flex" type="button">
+                <button class="open-nav nav-toggler d-sm-none d-flex" type="button" data-aos="fade-left">
                     <span><i class="fas fa-bars"></i></span>
                 </button>
             </li>
 
             <div class="navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav d-lg-flex d-none" data-aos="fade-up" data-aos-delay="300">
+                <ul class="navbar-nav d-lg-flex d-none" data-aos="fade-up">
                     <li>
-                        <a href="#/">
+                        <a
+                            href="https://www.google.com/maps/place/Ghumti/@27.7665134,85.3517318,17z/data=!3m1!4b1!4m5!3m4!1s0x39eb1ea7ea91c439:0xebe220255c9e502d!8m2!3d27.7665134!4d85.3539205">
                             <span> <i class="fas fa-map-marker-alt"></i></span>
                             <span>ADDRESS</span>
                             <p>Budanilkantha, Kathmandu</p>
                         </a>
                     </li>
                     <li>
-                        <a href="#/">
+                        <a href="tel: +977 9862259363">
                             <span><i class="fas fa-phone-alt"></i></span>
                             <span>CALL ME</span>
-                            <p>9862259363</p>
+                            <p>+977 9862259363</p>
                         </a>
                     </li>
 
                 </ul>
-                <li class="nav-toggle" data-aos="fade-left" data-aos-delay="300">
+                <li class="nav-toggle" data-aos="fade-left">
                     <button class=" open-nav nav-toggler d-sm-flex d-none" type="button" data-toggle="collapse"
                         data-target="#navigation">
                         <span><i class="fas fa-bars"></i></span>
@@ -97,22 +96,22 @@
             </div>
             <div class="social-medias">
                 <li>
-                    <a href="#/">
+                    <a href="https://www.facebook.com/shubha.pradhan.58/">
                         <i class="fab fa-facebook-f"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="#/">
+                    <a href="https://www.instagram.com/shubha_pradhan/">
                         <i class="fab fa-instagram"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="#/">
+                    <a href="https://twitter.com/pradhan_shubha">
                         <i class="fab fa-twitter"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="#/">
+                    <a href="https://github.com/ShubhaPradhan">
                         <i class="fab fa-github"></i>
                     </a>
                 </li>
@@ -139,7 +138,7 @@
             <span class="arrow"><i class="fas fa-arrow-down"></i></span>
 
             <div class="content">
-                <div class="heading" data-aos="fade-up" data-aos-delay="300">
+                <div class="heading" data-aos="fade-up">
                     <p class="para hey">HEY! I AM</p>
                     <h1>Shubha Pradhan</h1>
                     <p class="what">I'm a
@@ -156,17 +155,21 @@
 
     <!-- END BANNER -->
 
-
+    <!-- SCROLL TOP BUTTON -->
+    <div class="topbutton">
+        <a href="#home" class="topbtn"><i class="fas fa-angle-up"></i></a>
+    </div>
+    <!-- END SCROLL TOP BUTTON -->
     <!-- ABOUT -->
 
 
     <div class="aboutme" id="about">
         <div class="row px-0 mx-0">
-            <div class="col-md-6 image r-0">
-                <img src="./assets/images/shubha.png" alt="" data-aos="fade-right">
+            <div class="col-md-6 image r-0" data-aos="fade-right">
+                <img src="./assets/images/shubha.png" alt="">
             </div>
-            <div class="col-md-6 pr-0 mx-0">
-                <div class="info" data-aos="fade-left">
+            <div class="col-md-6 pr-0 mx-0" data-aos="fade-left">
+                <div class="info">
                     <p class="para">ABOUT ME</p>
                     <h4>A FrontEnd Developer Based in Nepal</h4>
 
@@ -197,8 +200,7 @@
                             </li>
                         </div>
                     </div>
-
-                    <p class="comp-pro"><span>12</span> Project complete</p>
+                    <p class="comp-pro" id="counterinfo"><span class="num" id="projectNo">12</span> Project complete</p>
                     <button class="button">DOWNLOAD CV</button>
                 </div>
 
@@ -212,22 +214,25 @@
     <div class="resume" id="resume">
         <div class="row mx-0">
             <div class="col-md-3 sidebar" data-aos="fade-right">
-                <div class="main sticky-top">
+                <div class="sidenavigation sticky-top">
                     <li class="navs">
-                        <a href="#education" class="active">Education</a>
+                        <div class="line"></div>
+                        <a href="#education" class="education navi">Education</a>
                     </li>
                     <li class="navs">
-                        <a href="#experience" class="">Experience</a>
+                        <div class="line"></div>
+                        <a href="#experience" class="experience navi">Experience</a>
                     </li>
                     <li class="navs">
-                        <a href="#skills" class="">Skills</a>
+                        <div class="line"></div>
+                        <a href="#skills" class="skills navi">Skills</a>
                     </li>
                 </div>
             </div>
             <div class="col-md-9">
                 <div id="education" class="main education">
                     <h3>Education</h3>
-                    <div class="wrapper" data-aos="fade-left">
+                    <div class="wrapper" data-aos="fade-up">
                         <div class="image">
                             <img src="./assets/images/education.png" alt="" class="img-fluid">
                         </div>
@@ -241,7 +246,7 @@
                         </div>
                     </div>
                     <hr>
-                    <div class="wrapper" data-aos="fade-left">
+                    <div class="wrapper" data-aos="fade-up">
                         <div class="image">
                             <img src="./assets/images/education.png" alt="" class="img-fluid">
                         </div>
@@ -255,7 +260,7 @@
                         </div>
                     </div>
                     <hr>
-                    <div class="wrapper" data-aos="fade-left">
+                    <div class="wrapper" data-aos="fade-up">
                         <div class="image">
                             <img src="./assets/images/education.png" alt="" class="img-fluid">
                         </div>
@@ -274,7 +279,7 @@
 
                 <div id="experience" class="main experience">
                     <h3>Experience</h3>
-                    <div class="wrapper" data-aos="fade-left">
+                    <div class="wrapper" data-aos="fade-up">
                         <div class="image">
                             <img src="./assets/images/experience.png" alt="" class="img-fluid">
                         </div>
@@ -292,24 +297,192 @@
                 </div>
                 <div id="skills" class="main skills">
                     <h3>Skills</h3>
+                    <div class="image-container" data-aos="fade-up">
+                        <img src="./assets/images/skills1.png" alt="" class="img-fluid">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    </div>
+
+
     <!-- END RESUME -->
 
 
+    <!-- PROJECTS -->
+    <div id="project" class="projects-group">
+        <div class="headings" data-aos="fade-up">
+            <p>PORTFOLIOS</p>
+            <h1>Some of my awesome stuffs here</h1>
+        </div>
+
+
+        <div class="projects">
+            <div class="row mx-0 px-0">
+                <div class="col-5 project h-100">
+                    <div class="content">
+                        <div class="image-container">
+                            <img src="./assets/images/portfolio1.jpg" alt="" class="img-fluid" data-aos="fade-right">
+                        </div>
+                        <div class="image-overlay">
+                            <div class="desc">
+                                <h3>YourTutor</h3>
+                                <p>A sweet project for searching tutors.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-7 project h-100">
+                    <div class="content">
+                        <div class="image-container">
+                            <img src="./assets/images/portfolio2.jpg" alt="" class="img-fluid" data-aos="fade-left">
+                        </div>
+                        <div class="image-overlay">
+                            <div class="desc">
+                                <h3>YourTutor</h3>
+                                <p>A sweet project for searching tutors.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 project h-100">
+                    <div class="content">
+                        <div class="image-container">
+                            <img src="./assets/images/portfolio3.jpg" alt="" class="img-fluid" data-aos="fade-right">
+                        </div>
+                        <div class="image-overlay">
+                            <div class="desc">
+                                <h3>YourTutor</h3>
+                                <p>A sweet project for searching tutors.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 project h-100">
+                    <div class="content">
+                        <div class="image-container">
+                            <img src="./assets/images/portfolio5.jpg" alt="" class="img-fluid" data-aos="fade-up">
+                        </div>
+                        <div class="image-overlay">
+                            <div class="desc">
+                                <h3>YourTutor</h3>
+                                <p>A sweet project for searching tutors.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 project h-100">
+                    <div class="content">
+                        <div class="image-container">
+                            <img src="./assets/images/portfolio4.jpg" alt="" class="img-fluid" data-aos="fade-left">
+                        </div>
+                        <div class="image-overlay">
+                            <div class="desc">
+                                <h3>YourTutor</h3>
+                                <p>A sweet project for searching tutors.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- END PROJECTS -->
+
+    <!-- CONTACTS -->
+
+    <section id="contact" class="contacts">
+        <div class="newsletter text-center">
+            <div class="contain" data-aos="fade-up">
+                <h1>Stay tuned with updates</h1>
+                <div class="input-group col-xl-4 col-lg-6 col-md-6 col-12 mx-auto mt-4">
+                    <input type="text" class="form-control text-muted col-12" placeholder="Enter Your Email">
+                    <div class="input-group-append d-md-flex d-none" id="button-addon4">
+                        <button class="btn" type="button">SUBMIT</button>
+                    </div>
+                </div>
+                <div class="text-center d-md-none d-block mt-3">
+                    <button class="btn" type="button">SUBMIT</button>
+                </div>
+            </div>
+        </div>
+        <div class="contact ">
+            <div class="row mx-0 px-0">
+                <div class="col-md-6 col-12 contact-info" data-aos="fade-right">
+                    <h1 class="headings-1">Contacts</h1>
+                    <div class="info">
+                        <li>
+                            <a
+                                href="https://www.google.com/maps/place/Ghumti/@27.7665134,85.3517318,17z/data=!3m1!4b1!4m5!3m4!1s0x39eb1ea7ea91c439:0xebe220255c9e502d!8m2!3d27.7665134!4d85.3539205">
+                                <p class="title"><i class="fas fa-map-marker-alt mr-2"></i>ADDRESS</p>
+                                <p class="">Budanilkantha, Kathmandu</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel: +977 9862259363">
+                                <p class="title"><i class="fas fa-phone-alt mr-2"></i>PHONE</p>
+                                <p class="phone">+977 9862259363</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://mail.google.com/mail/?view=cm&fs=1&to=shubhadon7@gmail.com&su=SUBJECT&body=BODY">
+                                <p class=" title"><i class="fas fa-at mr-2"></i>E-MAIL</p>
+                                <p class="">shubhadon7@gmail.com</p>
+                            </a>
+                        </li>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12 map-info px-0" data-aos="fade-left">
+                    <div class="map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3530.4043244801373!2d85.35173181501669!3d27.766513382767442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1ea7ea91c439%3A0xebe220255c9e502d!2sGhumti!5e0!3m2!1sen!2snp!4v1621683513048!5m2!1sen!2snp"
+                            allowfullscreen="" loading="lazy" class="img-fluid"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer">
+            <a class="navbar-brand" href="#/"><span>S</span>hubha</a>
+            <div class=" copyrights">
+                <p class="mb-0">Shubha &copy; 2021 All Rights Reserved</p>
+            </div>
+
+            <div class="social-media">
+
+                <a href="https://www.facebook.com/shubha.pradhan.58/" class="navs-link">
+                    <li class="social"><i class="fab fa-facebook-f"></i></li>
+                </a>
+                <a href="https://www.instagram.com/shubha_pradhan/" class="navs-link">
+                    <li class="social"><i class="fab fa-instagram"></i></li>
+                </a>
+                <a href="https://twitter.com/pradhan_shubha" class="navs-link">
+                    <li class="social"><i class="fab fa-twitter"></i></li>
+                </a>
+                <a href="https://github.com/ShubhaPradhan" class=" navs-link">
+                    <li class="social"><i class="fab fa-github"></i></li>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- END FOOTER -->
 
     <!-- Script Source Files -->
     <script src="vendor/js/jquery-3.6.0.min.js"></script>
     <script src="./assets/js/main.js"></script>
+    <script src="./vendor/js/aos.js"></script>
     <script src="vendor/js/jquery.waypoints.js"></script>
     <script src="vendor/js/jquery.counterup.js"></script>
     <script src="vendor/js/bootstrap.min.js"></script>
     <script src="vendor/js/bootstrap.bundle.js"></script>
     <script src="vendor/js/popper.min.js"></script>
-    <script src="./vendor/js/aos.js"></script>
 
 
 </body>

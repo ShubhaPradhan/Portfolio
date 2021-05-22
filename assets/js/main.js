@@ -86,4 +86,70 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// RESUME
+// RESUME ACTIVE NAV
+
+$(window).scroll(function () {
+
+    // SCROLL TO THE TOP 
+    const toTopBtn = document.querySelector('.topbtn');
+    if ($(window).scrollTop() > 220) {
+        $(toTopBtn).addClass('active');
+        const hei = screen.availHeight;
+        $(toTopBtn).css('top', hei - 150);
+    } else if ($(window).scrollTop() <= 220) {
+        $(toTopBtn).removeClass('active');
+    }
+    // END SCROLL TO TOP
+    var windscroll = $(window).scrollTop();
+    if (windscroll >= 100) {
+        $('.main').each(function (i) {
+            // The number at the end of the next line is how pany pixels you from the top you want it to activate.\
+            if ($(this).position().top <= windscroll - 1300) {
+                $('.sidebar li.active').removeClass('active');
+                $('.sidebar li').eq(i).addClass('active');
+            }
+        });
+
+    } else {
+        $('.sidebar li.active').removeClass('active');
+        $('.sidebar li:first').addClass('active');
+    }
+}).scroll();
+
+
+
+// PROJECT COUNTER EFFECT
+let projectCountInitial = 0;
+let projectCountFinal = 12;
+
+let projectDiv = document.getElementById("projectNo");
+
+let countSec = document.getElementById("counterinfo");
+
+let increaseValProject = setInterval(function () {
+    if (isInViewport(countSec)) {
+        projectCountInitial++;
+        projectDiv.innerHTML = projectCountInitial;
+        if (projectCountInitial === projectCountFinal) {
+            clearInterval(increaseValProject);
+        }
+    }
+}, 130);
+
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    const height = window.innerHeight || document.documentElement.clientHeight;
+    const width = window.innerWidth || document.documentElement.clientWidth;
+    const offset = {
+        left: 0,
+        right: 0,
+        top: 0,
+        bottom: 0,
+    };
+    return (
+        rect.right >= -offset.left &&
+        rect.bottom >= -offset.top &&
+        rect.left <= width + offset.right &&
+        rect.top <= height + offset.bottom
+    );
+}
