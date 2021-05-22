@@ -575,7 +575,8 @@ nav button.open-nav:hover {
 .projects-group .projects .content img {
     height: 430px;
     width: 100%;
-    object-fit: cover;
+    object-fit: fill;
+
 }
 
 .projects-group .projects .content .image-overlay {
