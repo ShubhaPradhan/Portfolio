@@ -9,6 +9,18 @@ body {
     overflow-x: hidden;
 }
 
+.loader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
 h1,
 p,
 span,
@@ -567,9 +579,14 @@ nav button.open-nav:hover {
     overflow: hidden;
 }
 
+.projects-group .projects .project a {
+    color: #fff;
+    text-decoration: none;
+}
+
 .projects-group .projects .content {
     position: relative;
-    transition: all 0.4s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .projects-group .projects .content img {
@@ -584,29 +601,41 @@ nav button.open-nav:hover {
     top: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.671);
-    width: 30%;
+    width: 50%;
     height: 100%;
     opacity: 0;
-    transition: all 0.4s ease-in-out;
+    transition: all 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .projects-group .projects .content .image-overlay .desc {
-    opacity: 0;
-    transition: all 0.5s ease-in-out;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+
 }
 
-.projects-group .projects .content:hover .image-overlay .desc {
-    opacity: 1;
-    transition: all 0.5s ease-in-out;
+.projects-group .projects .content .image-overlay .desc h3 {
+    white-space: nowrap;
+}
+
+.projects-group .projects .content .image-overlay .desc div {
+    white-space: nowrap;
 }
 
 .projects-group .projects .content:hover .image-overlay {
     opacity: 1;
     width: 100%;
 }
+
+
 
 
 /* END PROJECTS */

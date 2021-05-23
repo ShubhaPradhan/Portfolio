@@ -2,6 +2,7 @@
 $(function () {
     AOS.init();
 });
+
 // NAVBAR COME UP AFTER SCROLLING
 $(function () {
     $(document).scroll(function () {
@@ -152,4 +153,11 @@ function isInViewport(element) {
         rect.left <= width + offset.right &&
         rect.top <= height + offset.bottom
     );
+}
+
+// LOADER
+const load = document.querySelector('.loader');
+
+function loadfunc() {
+    load.style.display = "none";
 }
