@@ -121,6 +121,9 @@ button.button:hover {
 /* END UNIVERSAL */
 /* NAVBAR */
 nav {
+    position: fixed !important;
+    width: 100%;
+    z-index: 100;
     background-color: transparent;
     padding: 1rem 4rem !important;
     display: flex;
@@ -380,6 +383,10 @@ nav button.open-nav:hover {
     padding: 0rem 0rem 0rem 5rem;
 }
 
+.aboutme .row {
+    overflow: hidden;
+}
+
 .aboutme .info {
     padding-right: 3rem;
     padding-left: 2rem;
@@ -510,7 +517,7 @@ nav button.open-nav:hover {
     align-items: center;
     border-radius: 50%;
     background: #d5c455;
-    height: 50px;
+    height: 80px;
     width: 80px;
 
 }
@@ -821,7 +828,331 @@ nav button.open-nav:hover {
 
 
 /* MEDIA QUERIES */
+@media only screen and (max-width: 1300px) {
+    .projects-group .headings {
+        padding: 0rem 25rem;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+
+    /* NAVBR */
+    .navigate {
+        padding: 5rem 0rem 5rem 4rem;
+        width: 40%;
+    }
+
+    /* END NAVBAR */
+
+    /* ABOUT */
+    .aboutme .image img {
+        height: 700px;
+        padding: 0rem;
+    }
+
+    .aboutme .info {
+        padding: 0.5rem;
+    }
+
+    /* END ABOUT */
+
+    /* RESUME */
+    .resume {
+        margin-top: 8rem;
+        padding: 3rem;
+    }
+
+    .resume .main {
+        margin-top: 0rem;
+    }
+
+    .resume .sidebar .sidenavigation {
+        margin-top: 0rem;
+        top: 200px;
+    }
+
+    .resume .main .image {
+        height: 55px;
+        width: 55px;
+        margin-bottom: 0.2rem;
+    }
+
+    /* END RESUME */
+
+    /* PROJECTS */
+
+    .projects-group {
+        height: 450px;
+    }
+
+    .projects-group .headings h1 {
+        font-size: 2.5rem;
+    }
+
+
+    .projects-group .projects {
+        position: absolute;
+        top: 190px;
+        padding: 0rem 0.5rem;
+    }
+
+    .projects-group .headings {
+        padding: 0rem 0rem;
+    }
+
+    .projects-group .projects .content img {
+        height: 350px;
+        width: 100%;
+        object-fit: fill;
+
+    }
+
+    /* END PROJECTS */
+
+
+    /* CONTACT */
+    .contacts .contact-info {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        text-align: start;
+        padding: 0rem 8rem;
+    }
+
+    /* END CONTACT */
+}
+
+@media only screen and (max-width: 992px) {
+
+    /* NAVBAR */
+    .navigate {
+        padding: 5rem 0rem 5rem 4rem;
+        width: 40%;
+    }
+
+    /* END NAVBAR */
+
+    /* ABOUT */
+    .aboutme .image img {
+        height: 700px;
+        padding: 0rem;
+    }
+
+    .aboutme .info {
+        padding: 0.5rem;
+    }
+
+    /* END ABOUT */
+
+
+    /* RESUME */
+    .resume {
+        margin-top: 7rem;
+        padding: 0rem;
+    }
+
+    .resume .main {
+        margin-top: 0rem;
+    }
+
+    .resume .main .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .resume .main .image {
+        height: 55px;
+        width: 55px;
+        margin-bottom: 0.2rem;
+    }
+
+    /* END RESUME */
+
+
+    /* PROJECTS */
+
+    .projects-group {
+        margin-bottom: 60rem;
+        height: 450px;
+    }
+
+    .projects-group .headings h1 {
+        font-size: 2.5rem;
+    }
+
+
+    .projects-group .projects {
+        position: absolute;
+        top: 190px;
+        padding: 0rem 0.5rem;
+    }
+
+    .projects-group .headings {
+        padding: 0rem 0rem;
+    }
+
+    .projects-group .projects .content img {
+        height: 350px;
+        width: 100%;
+        object-fit: fill;
+
+    }
+
+    /* END PROJECTS */
+
+
+    /* CONTACT */
+    .contacts .contact-info {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        text-align: start;
+        padding: 0rem 5rem;
+    }
+
+    /* END CONTACT */
+
+}
+
 @media only screen and (max-width: 768px) {
+
+    /* NAVBAR */
+    nav {
+        position: relative !important;
+        padding: 1rem 0.5rem !important;
+    }
+
+    .navigate {
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        padding: 1rem;
+        width: 100%;
+        background: rgba(0, 0, 0);
+        z-index: 1000000;
+    }
+
+    .navigate .close-nav {
+        top: 20px;
+        right: 20px;
+    }
+
+    .navigate .social-medias li {
+        margin-right: 1rem;
+    }
+
+    /* END NAVBAR */
+    /* BANNER */
+    .banner-wrapper {
+        min-height: 500px;
+        position: relative;
+        width: 100%;
+    }
+
+    .banner-wrapper .content {
+        position: absolute;
+        top: 200px;
+        color: #000;
+        font-weight: 800;
+    }
+
+    .banner-wrapper .diamond {
+        top: 340px;
+    }
+
+    .banner-wrapper .content h1 {
+        font-size: 32px;
+        font-weight: 900;
+        margin: 1rem 0rem;
+    }
+
+    .banner-wrapper .arrow {
+        top: 340px;
+        margin-right: -2rem;
+        animation: mymoves 1.8s infinite;
+    }
+
+    @keyframes mymoves {
+        from {
+            top: 340px;
+        }
+
+        to {
+            top: 390px;
+        }
+    }
+
+    /* END BANNER */
+    /* ABOUT */
+    .aboutme .image img {
+        height: 400px;
+        object-fit: cover;
+        padding: 0rem;
+    }
+
+    .aboutme .info {
+        padding: 0;
+    }
+
+    /* END ABOUT */
+    /* RESUME */
+    .resume {
+        margin-top: 6rem;
+        padding: 0rem;
+    }
+
+    .resume .sidebar .sidenavigation {
+        margin-top: 0rem;
+        top: 200px;
+    }
+
+    .resume .main {
+        margin-top: 2rem;
+    }
+
+    .resume .main .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .resume .main .image {
+        height: 55px;
+        width: 55px;
+        margin-bottom: 0.2rem;
+    }
+
+    /* END RESUME */
+    /* PROJECTS */
+
+    .projects-group {
+        margin-bottom: 55rem;
+        height: 450px;
+    }
+
+    .projects-group .headings h1 {
+        font-size: 2rem;
+    }
+
+
+    .projects-group .projects {
+        position: absolute;
+        top: 190px;
+        padding: 0rem 0.5rem;
+    }
+
+    .projects-group .headings {
+        padding: 0rem 0rem;
+    }
+
+    .projects-group .projects .content img {
+        height: 300px;
+        width: 100%;
+        object-fit: fill;
+
+    }
+
+    /* END PROJECTS */
+
+    /* NEWSLETTER */
     .newsletter {
         padding: 3rem 1.8rem;
     }
@@ -836,10 +1167,13 @@ nav button.open-nav:hover {
     }
 
     .newsletter button.btn {
-        background: #fd7444;
         padding: 1rem 2rem;
     }
 
+    /* END NEWSLETTER */
+
+
+    /* CONTACT */
     .contacts .contact-info {
         margin-top: 3rem;
         margin-bottom: 3rem;
@@ -851,21 +1185,66 @@ nav button.open-nav:hover {
         padding-top: 90.25%;
     }
 
+    /* END CONTACT */
+
+
+    /* FOOTER */
     .footer {
-        display: block;
+        flex-direction: column;
     }
 
-    .footer>div {
-        display: block;
-        margin: auto;
+    .footer>div,
+    .footer>a {
+
         text-align: center;
-        margin-top: 1.4rem;
+        margin-top: 1rem;
+    }
+
+    .footer .navbar-brand {
+        margin-bottom: 1rem;
     }
 
     .footer .social-media {
-        margin-top: 2rem;
+        margin: auto;
+        margin-top: 1.5rem;
 
     }
+
+    /* END FOOTER */
+}
+
+
+@media only screen and (max-width: 568px) {
+    /* PROJECTS */
+
+    .projects-group {
+        margin-bottom: 116rem;
+        height: 450px;
+    }
+
+    .projects-group .headings h1 {
+        font-size: 2rem;
+    }
+
+
+    .projects-group .projects {
+        position: absolute;
+        top: 250px;
+        padding: 0rem 0.5rem;
+    }
+
+    .projects-group .headings {
+        padding: 0rem 0rem;
+    }
+
+    .projects-group .projects .content img {
+        height: 300px;
+        width: 100%;
+        object-fit: fill;
+
+    }
+
+    /* END PROJECTS */
 }
 
 /* END MEDIA QUERIES */

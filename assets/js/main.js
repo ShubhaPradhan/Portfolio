@@ -43,10 +43,10 @@ $(document).mouseup(function (e) {
 const typedTextSpan = document.querySelector(".typed-text");
 const cursorSpan = document.querySelector(".cursor");
 
-const textArray = ["Frontend Developer.", "Student.", "Creator."];
+const textArray = ["Frontend Dev.", "Student.", "Creator."];
 const typingDelay = 200;
 const erasingDelay = 100;
-const newTextDelay = 2000; // Delay between current and next text
+const newTextDelay = 1000; // Delay between current and next text
 let textArrayIndex = 0;
 let charIndex = 0;
 
@@ -96,7 +96,7 @@ $(window).scroll(function () {
     if ($(window).scrollTop() > 220) {
         $(toTopBtn).addClass('active');
         const hei = screen.availHeight;
-        $(toTopBtn).css('top', hei - 150);
+        $(toTopBtn).css('top', hei - 120);
     } else if ($(window).scrollTop() <= 220) {
         $(toTopBtn).removeClass('active');
     }
